@@ -109,6 +109,22 @@
             bindings = <&kp LC(A) &kp D>;
             label = "DETACH_TMUX";
         };
+
+        ctrl_a_and: ctrl_a_and {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp A>,
+                <&macro_release>,
+                <&kp LCTRL &macro_param_1to1>,
+                <&macro_tap>,
+                <&kp MACRO_PLACEHOLDER>;
+
+            label = "CTRL_A_AND";
+        };
     };
 
     combos {
@@ -204,10 +220,10 @@
 
         layer_6 {
             bindings = <
-&trans  &trans  &windows_tmux   &trans           &trans      &trans             &trans      &trans  &trans  &trans  &prev_tmux  &trans
-&trans  &trans  &sessions_tmux  &detach_tmux     &trans      &trans             &trans      &trans  &trans  &trans  &trans      &trans
-&trans  &trans  &trans          &createwin_tmux  &trans      &trans             &next_tmux  &trans  &trans  &trans  &trans      &trans
-                                &prev_tmux       &next_tmux  &createwin_tmux    &trans      &trans  &trans
+&trans         &trans  &windows_tmux   &trans           &trans      &ctrl_a_and PERCENT    &trans      &trans  &trans  &trans  &prev_tmux  &trans
+&ctrl_a_and Z  &trans  &sessions_tmux  &detach_tmux     &trans      &trans                 &trans      &trans  &trans  &trans  &trans      &trans
+&trans         &trans  &trans          &createwin_tmux  &trans      &trans                 &next_tmux  &trans  &trans  &trans  &trans      &trans
+                                       &prev_tmux       &next_tmux  &createwin_tmux        &trans      &trans  &trans
             >;
         };
 
