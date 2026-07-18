@@ -218,12 +218,12 @@
             >;
         };
 
-        layer_6 {
+        tmux {
             bindings = <
-&trans         &trans         &windows_tmux   &trans           &trans      &ctrl_a_and PERCENT    &trans         &trans         &trans         &trans         &prev_tmux  &trans
-&ctrl_a_and Z  &trans         &sessions_tmux  &detach_tmux     &trans      &trans                 &ctrl_a_and H  &ctrl_a_and J  &ctrl_a_and K  &ctrl_a_and L  &trans      &trans
-&trans         &ctrl_a_and Z  &trans          &createwin_tmux  &trans      &trans                 &next_tmux     &trans         &trans         &trans         &trans      &trans
-                                              &prev_tmux       &next_tmux  &createwin_tmux        &trans         &trans         &trans
+&trans         &trans         &windows_tmux   &trans           &trans      &ctrl_a_and PERCENT    &trans            &trans            &trans                &trans             &prev_tmux  &trans
+&ctrl_a_and Z  &trans         &sessions_tmux  &detach_tmux     &trans      &trans                 &ctrl_a_and LEFT  &ctrl_a_and DOWN  &ctrl_a_and UP_ARROW  &ctrl_a_and RIGHT  &trans      &trans
+&trans         &ctrl_a_and Z  &trans          &createwin_tmux  &trans      &trans                 &next_tmux        &trans            &trans                &trans             &trans      &trans
+                                              &prev_tmux       &next_tmux  &createwin_tmux        &trans            &trans            &trans
             >;
         };
 
