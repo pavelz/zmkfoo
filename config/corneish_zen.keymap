@@ -134,6 +134,11 @@
             bindings = <&kp RA(SPACE)>;
             key-positions = <36 37 38>;
         };
+
+        terminal_reset {
+            bindings = <&kp LC(L)>;
+            key-positions = <19 20 21>;
+        };
     };
 
     keymap {
