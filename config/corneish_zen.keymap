@@ -21,11 +21,11 @@
 
 / {
     behaviors {
-        td0: td0 {
+        dblclk_capslock: dblclk_capslock {
             compatible = "zmk,behavior-tap-dance";
-            label = "TD0";
+            label = "DBLCLK_CAPSLOCK";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
+            bindings = <&kp LEFT_SHIFT>, <&kp CAPSLOCK>;
         };
 
         td1rest: td1rest {
@@ -35,21 +35,11 @@
             bindings = <&trans>, <&sys_reset>;
         };
 
-        td1bootloader: td1bootloader {
+        dblclk_bootloader: dblclk_bootloader {
             compatible = "zmk,behavior-tap-dance";
-            label = "TD1BOOTLOADER";
+            label = "DBLCLK_BOOTLOADER";
             #binding-cells = <0>;
             bindings = <&none>, <&bootloader>;
-        };
-
-        td4layer4: td4layer4 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "TD4LAYER4";
-            bindings = <&lt>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <180>;
-            flavor = "hold-preferred";
         };
 
         clearBT: clearBT {
@@ -154,10 +144,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&lt 4 TAB  &kp Q    &kp W  &kp E  &kp R         &lt 5 T        &kp Y        &kp U          &kp I      &kp O    &kp P     &kp BSPC
-&kp LCTRL  &lt 6 A  &kp S  &kp D  &kp F         &kp G          &kp H        &kp J          &kp K      &kp L    &kp SEMI  &kp SQT
-&td0       &kp Z    &kp X  &kp C  &kp V         &lt 7 B        &kp N        &kp M          &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
-                           &mo 1  &kp LEFT_GUI  &lt 3 SPACE    &lt 2 ENTER  &kp RIGHT_ALT  &mo 3
+&lt 4 TAB         &kp Q    &kp W  &kp E  &kp R         &lt 5 T        &kp Y        &kp U          &kp I      &kp O    &kp P     &kp BSPC
+&kp LCTRL         &lt 6 A  &kp S  &kp D  &kp F         &kp G          &kp H        &kp J          &kp K      &kp L    &kp SEMI  &kp SQT
+&dblclk_capslock  &kp Z    &kp X  &kp C  &kp V         &lt 7 B        &kp N        &kp M          &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
+                                  &mo 3  &kp LEFT_GUI  &lt 1 SPACE    &lt 2 ENTER  &kp RIGHT_ALT  &mo 3
             >;
         };
 
@@ -198,10 +188,10 @@
         layer_3 {
             display-name = "Fn";
             bindings = <
-&kp GRAVE  &kp F1  &kp F2             &kp F3                &kp F4                         &kp F5              &kp F6                     &kp F7                   &kp F8           &kp F9  &kp F10  &kp F11
-&mkp MB1   &none   &none              &none                 &td1rest                       &td1bootloader      &td1bootloader             &td1rest                 &none            &none   &none    &kp PIPE
-&none      &none   &kp K_VOLUME_DOWN  &kp K_VOLUME_DOWN     &kp K_VOLUME_DOWN2             &kp K_VOLUME_UP2    &kp LA(LS(C_VOLUME_DOWN))  &kp LA(LS(C_VOLUME_UP))  &none            &none   &none    &kp F12
-                                      &kp C_BRIGHTNESS_DEC  &mt LEFT_GUI C_BRIGHTNESS_INC  &trans              &trans                     &kp C_VOLUME_DOWN        &kp C_VOLUME_UP
+&kp GRAVE  &kp F1  &kp F2             &kp F3                &kp F4                         &kp F5                &kp F6                     &kp F7                   &kp F8           &kp F9  &kp F10  &kp F11
+&mkp MB1   &none   &none              &none                 &td1rest                       &dblclk_bootloader    &dblclk_bootloader         &td1rest                 &none            &none   &none    &kp PIPE
+&none      &none   &kp K_VOLUME_DOWN  &kp K_VOLUME_DOWN     &kp K_VOLUME_DOWN2             &kp K_VOLUME_UP2      &kp LA(LS(C_VOLUME_DOWN))  &kp LA(LS(C_VOLUME_UP))  &none            &none   &none    &kp F12
+                                      &kp C_BRIGHTNESS_DEC  &mt LEFT_GUI C_BRIGHTNESS_INC  &trans                &trans                     &kp C_VOLUME_DOWN        &kp C_VOLUME_UP
             >;
         };
 
@@ -216,10 +206,10 @@
 
         layer_5 {
             bindings = <
-&createwin_tmux  &sessions_tmux  &windows_tmux  &prev_tmux  &next_tmux  &trans       &kp ENTER       &kp BACKSPACE   &kp LG(BACKSPACE)  &trans           &trans  &trans
-&none            &none           &none          &none       &none       &none        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP       &mmv MOVE_RIGHT  &trans  &trans
-&trans           &trans          &trans         &trans      &trans      &trans       &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP       &msc SCRL_RIGHT  &trans  &trans
-                                                &mkp MCLK   &mkp RCLK   &mkp LCLK    &mkp MB4        &mkp MB5        &trans
+&createwin_tmux     &sessions_tmux  &windows_tmux  &prev_tmux  &next_tmux  &trans       &kp ENTER       &kp BACKSPACE   &kp LG(BACKSPACE)  &trans           &trans  &trans
+&none               &none           &none          &none       &none       &none        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP       &mmv MOVE_RIGHT  &trans  &trans
+&dblclk_bootloader  &trans          &trans         &trans      &trans      &trans       &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP       &msc SCRL_RIGHT  &trans  &dblclk_bootloader
+                                                   &mkp MCLK   &mkp RCLK   &mkp LCLK    &mkp MB4        &mkp MB5        &trans
             >;
         };
 
