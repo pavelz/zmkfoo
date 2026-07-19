@@ -134,7 +134,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        launchpad {
             display-name = "QWERTY";
 
             // --------------------------------------------------------------------------------
@@ -151,7 +151,7 @@
             >;
         };
 
-        lower_layer {
+        numbersmouse {
             display-name = "NUMBER";
 
             // -----------------------------------------------------------------------------------------
@@ -168,7 +168,7 @@
             >;
         };
 
-        raise_layer {
+        punctuation {
             display-name = "SYMBOL";
 
             // -----------------------------------------------------------------------------------------
@@ -185,7 +185,7 @@
             >;
         };
 
-        layer_3 {
+        functionkeys {
             display-name = "Fn";
             bindings = <
 &kp GRAVE  &kp F1  &kp F2             &kp F3                &kp F4                         &kp F5                &kp F6                     &kp F7                   &kp F8           &kp F9  &kp F10  &kp F11
@@ -195,7 +195,7 @@
             >;
         };
 
-        layer_4 {
+        rgbandmisc {
             bindings = <
 &trans                &kp LC(C)  &kp LC(Z)  &kp LA(LG(F5))  &none           &none                       &kp K_PLAY_PAUSE                   &kp K_FORWARD                   &kp K_BACK       &kp C_RANDOM_PLAY  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR
 &kp C_BRIGHTNESS_INC  &trans     &trans     &trans          &trans          &trans                      &rgb_ug RGB_COLOR_HSB(121,100,50)  &rgb_ug RGB_COLOR_HSB(0,96,48)  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD    &rgb_ug RGB_SPI  &rgb_ug RGB_SPD
@@ -204,7 +204,7 @@
             >;
         };
 
-        layer_5 {
+        mousekeys {
             bindings = <
 &createwin_tmux     &sessions_tmux  &windows_tmux  &prev_tmux  &next_tmux  &trans       &kp ENTER       &kp BACKSPACE   &kp LG(BACKSPACE)  &trans           &trans  &trans
 &none               &none           &none          &none       &none       &none        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP       &mmv MOVE_RIGHT  &trans  &trans
