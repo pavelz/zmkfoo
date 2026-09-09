@@ -191,7 +191,7 @@
 &kp GRAVE  &kp F1  &kp F2             &kp F3                &kp F4                         &kp F5                &kp F6                     &kp F7                   &kp F8           &kp F9  &kp F10  &kp F11
 &mkp MB1   &none   &none              &none                 &td1rest                       &dblclk_bootloader    &dblclk_bootloader         &td1rest                 &none            &none   &none    &kp PIPE
 &none      &none   &kp K_VOLUME_DOWN  &kp K_VOLUME_DOWN     &kp K_VOLUME_DOWN2             &kp K_VOLUME_UP2      &kp LA(LS(C_VOLUME_DOWN))  &kp LA(LS(C_VOLUME_UP))  &none            &none   &none    &kp F12
-                                      &kp C_BRIGHTNESS_DEC  &mt LEFT_GUI C_BRIGHTNESS_INC  &trans                &trans                     &kp C_VOLUME_DOWN        &kp C_VOLUME_UP
+                                      &kp C_BRIGHTNESS_DEC  &mt LEFT_GUI C_BRIGHTNESS_INC  &kp LA(LG(F5))        &kp K_MUTE                 &kp C_VOLUME_DOWN        &kp C_VOLUME_UP
             >;
         };
 
