@@ -4,12 +4,25 @@
  * SPDX-License-Identifier: MIT
  */
 
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1200  // default: 600
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 15    // default: 10
+
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
+
+&mmv {
+    time-to-max-speed-ms = <200>;
+    acceleration-exponent = <1>;
+};
+
+&msc {
+    time-to-max-speed-ms = <200>;   // default: 300
+    acceleration-exponent = <1>;    // default: 0 (constant)
+};
 
 / {
     chosen {
