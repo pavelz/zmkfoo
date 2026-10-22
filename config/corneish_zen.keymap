@@ -211,9 +211,9 @@
         rgbandmisc {
             bindings = <
 &trans                &kp LC(C)  &kp LC(Z)  &kp LA(LG(F5))  &none           &none                       &kp K_PLAY_PAUSE                   &kp K_FORWARD                   &kp K_BACK       &kp C_RANDOM_PLAY  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR
-&kp C_BRIGHTNESS_INC  &trans     &trans     &trans          &trans          &trans                      &rgb_ug RGB_COLOR_HSB(121,100,50)  &rgb_ug RGB_COLOR_HSB(0,96,48)  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD    &rgb_ug RGB_SPI  &rgb_ug RGB_SPD
-&kp C_BRIGHTNESS_DEC  &trans     &kp LG(X)  &kp LG(C)       &kp LG(V)       &trans                      &kp C_VOLUME_DOWN                  &kp C_VOLUME_UP                 &kp K_MUTE       &none              &kp K_STOP       &rgb_ug RGB_TOG
-                                            &msc SCRL_UP    &msc SCRL_DOWN  &kp LS(LG(LC(NUMBER_4)))    &trans                             &out OUT_BLE                    &out OUT_USB
+&kp C_BRIGHTNESS_INC  &none      &none      &none           &none           &none                       &rgb_ug RGB_COLOR_HSB(121,100,50)  &rgb_ug RGB_COLOR_HSB(0,96,48)  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD    &rgb_ug RGB_SPI  &rgb_ug RGB_SPD
+&kp C_BRIGHTNESS_DEC  &none      &kp LG(X)  &kp LG(C)       &kp LG(V)       &none                       &kp C_VOLUME_DOWN                  &kp C_VOLUME_UP                 &kp K_MUTE       &none              &kp K_STOP       &rgb_ug RGB_TOG
+                                            &msc SCRL_UP    &msc SCRL_DOWN  &kp LS(LG(LC(NUMBER_4)))    &none                              &out OUT_BLE                    &out OUT_USB
             >;
         };
 
