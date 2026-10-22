@@ -228,9 +228,9 @@
 
         tmux {
             bindings = <
-&trans         &trans         &windows_tmux   &trans           &trans      &ctrl_a_and PERCENT    &trans            &trans            &trans                &trans             &prev_tmux  &trans
-&ctrl_a_and Z  &trans         &sessions_tmux  &detach_tmux     &trans      &trans                 &ctrl_a_and LEFT  &ctrl_a_and DOWN  &ctrl_a_and UP_ARROW  &ctrl_a_and RIGHT  &trans      &trans
-&trans         &ctrl_a_and Z  &trans          &createwin_tmux  &trans      &trans                 &next_tmux        &trans            &trans                &trans             &trans      &trans
+&trans         &trans         &windows_tmux   &trans           &trans      &ctrl_a_and PERCENT    &trans            &trans            &trans                &trans             &prev_tmux           &trans
+&ctrl_a_and Z  &trans         &sessions_tmux  &detach_tmux     &trans      &trans                 &ctrl_a_and LEFT  &ctrl_a_and DOWN  &ctrl_a_and UP_ARROW  &ctrl_a_and RIGHT  &ctrl_a_and PAGE_UP  &ctrl_a_and DOUBLE_QUOTES
+&trans         &ctrl_a_and Z  &trans          &createwin_tmux  &trans      &trans                 &next_tmux        &trans            &trans                &trans             &kp PAGE_DOWN        &trans
                                               &prev_tmux       &next_tmux  &createwin_tmux        &trans            &trans            &trans
             >;
         };
